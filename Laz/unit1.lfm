@@ -1,0 +1,115 @@
+object Form1: TForm1
+  Left = 1397
+  Height = 262
+  Top = 388
+  Width = 514
+  Caption = 'Текстовик'
+  ClientHeight = 242
+  ClientWidth = 514
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 242
+    Top = 0
+    Width = 514
+    Align = alClient
+    OnChange = Memo1Change
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    left = 40
+    top = 40
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MenuItem4: TMenuItem
+        Caption = 'Новый'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem15: TMenuItem
+        Caption = 'Открыть'
+        OnClick = MenuItem15Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Закрыть'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Сохранить как'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Выход'
+        OnClick = MenuItem8Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Правка'
+      object MenuItem10: TMenuItem
+        Caption = 'Выделить всё'
+        OnClick = MenuItem10Click
+      end
+      object MenuItem9: TMenuItem
+        Caption = 'Вырезать'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem11: TMenuItem
+        Caption = 'Копировать'
+        OnClick = MenuItem11Click
+      end
+      object MenuItem12: TMenuItem
+        Caption = 'Вставить'
+        OnClick = MenuItem12Click
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Вид'
+      object MenuItem13: TMenuItem
+        Caption = 'Шрифт'
+        OnClick = MenuItem13Click
+      end
+      object MenuItem14: TMenuItem
+        Caption = 'Тема оформления'
+      end
+    end
+    object MenuItem16: TMenuItem
+      Caption = 'Поиск'
+      OnClick = MenuItem16Click
+      object MenuItem18: TMenuItem
+        Caption = 'Найти'
+      end
+      object MenuItem19: TMenuItem
+        Caption = 'Заменить'
+      end
+    end
+    object MenuItem17: TMenuItem
+      Caption = 'Справка'
+      object MenuItem20: TMenuItem
+        Caption = 'Справка'
+      end
+      object MenuItem21: TMenuItem
+        Caption = 'О программе'
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Текстовый документ|*.txt|Все|*.*'
+    left = 195
+    top = 17
+  end
+  object SaveDialog1: TSaveDialog
+    left = 254
+    top = 31
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    left = 337
+    top = 50
+  end
+end
