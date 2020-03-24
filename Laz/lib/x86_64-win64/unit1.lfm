@@ -1,27 +1,38 @@
 object Form1: TForm1
-  Left = 1013
-  Height = 262
-  Top = 362
+  Left = 1368
+  Height = 289
+  Top = 194
   Width = 514
-  Caption = 'Form1'
-  ClientHeight = 0
-  ClientWidth = 0
+  Caption = 'Текстовик'
+  ClientHeight = 269
+  ClientWidth = 514
   Menu = MainMenu1
+  OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
   object Memo1: TMemo
-    Left = 0
-    Height = 242
+    Left = 40
+    Height = 269
     Top = 0
-    Width = 514
+    Width = 474
     Align = alClient
-    Lines.Strings = (
-      'Memo1'
-    )
+    OnChange = Memo1Change
     TabOrder = 0
   end
+  object StringGrid1: TStringGrid
+    Left = 0
+    Height = 269
+    Top = 0
+    Width = 40
+    Align = alLeft
+    ColCount = 1
+    FixedCols = 0
+    FixedRows = 0
+    RowCount = 1
+    TabOrder = 1
+  end
   object MainMenu1: TMainMenu
-    left = 40
-    top = 40
+    left = 248
+    top = 112
     object MenuItem1: TMenuItem
       Caption = 'Файл'
       object MenuItem4: TMenuItem
@@ -76,6 +87,18 @@ object Form1: TForm1
       end
       object MenuItem14: TMenuItem
         Caption = 'Тема оформления'
+        object MenuItem22: TMenuItem
+          Caption = 'Черная'
+          OnClick = MenuItem22Click
+        end
+        object MenuItem23: TMenuItem
+          Caption = 'Белая'
+          OnClick = MenuItem23Click
+        end
+        object MenuItem24: TMenuItem
+          Caption = 'Красная'
+          OnClick = MenuItem24Click
+        end
       end
     end
     object MenuItem16: TMenuItem
@@ -83,9 +106,11 @@ object Form1: TForm1
       OnClick = MenuItem16Click
       object MenuItem18: TMenuItem
         Caption = 'Найти'
+        OnClick = MenuItem18Click
       end
       object MenuItem19: TMenuItem
         Caption = 'Заменить'
+        OnClick = MenuItem19Click
       end
     end
     object MenuItem17: TMenuItem
@@ -95,6 +120,7 @@ object Form1: TForm1
       end
       object MenuItem21: TMenuItem
         Caption = 'О программе'
+        OnClick = MenuItem21Click
       end
     end
   end
