@@ -74,7 +74,8 @@ var
   FileWork: String;
 
 implementation
-
+ uses Unit2;  // юзаем вторую форму
+ uses Unit3;
 {$R *.lfm}
 
 
@@ -86,7 +87,7 @@ begin
     FileWork:=Form1.SaveDialog1.FileName;
   end;
 end;
-procedure TForm1.Memo1Change(Sender: TObject);
+procedure TForm1.Memo1Change(Sender: TObject);  // делаем нумерацию строк
 var i: integer;
 begin
   StringGrid1.RowCount := Memo1.Lines.Count;
@@ -149,12 +150,13 @@ end;
 
 procedure TForm1.MenuItem18Click(Sender: TObject);
 begin
-
+  Unit3.Form3.Show;
 end;
+
 
 procedure TForm1.MenuItem19Click(Sender: TObject);
 begin
-
+  Unit2.Form2.Show;
 end;
 
 procedure TForm1.MenuItem21Click(Sender: TObject);

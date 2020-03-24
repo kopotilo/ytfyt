@@ -74,7 +74,7 @@ var
   FileWork: String;
 
 implementation
-
+ uses Unit2, Unit3;  // юзаем вторую форму
 {$R *.lfm}
 
 
@@ -149,12 +149,13 @@ end;
 
 procedure TForm1.MenuItem18Click(Sender: TObject);
 begin
-
+  Unit3.Form3.Show;
 end;
+
 
 procedure TForm1.MenuItem19Click(Sender: TObject);
 begin
-
+  Unit2.Form2.Show;
 end;
 
 procedure TForm1.MenuItem21Click(Sender: TObject);
