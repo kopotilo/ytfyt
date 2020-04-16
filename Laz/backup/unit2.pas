@@ -39,11 +39,11 @@ procedure TForm2.Button1Click(Sender: TObject);
         var
   s1,s2,s3, ts : String;
 begin
-  s1 := form1.Memo1.Text;
+  s1 := form1.SynEdit1.Text;       // Заменяем текст
   s2 := Form2.Edit1.Text;
   s3 := Form2.Edit2.Text;
   ts := StringReplace(s1, s2, s3, []);
-  form1.Memo1.Text:=ts;
+  form1.SynEdit1.Text:=ts;
 end;
 
 procedure TForm2.Edit1Change(Sender: TObject);

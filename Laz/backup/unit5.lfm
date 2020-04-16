@@ -1,0 +1,20 @@
+object Form5: TForm5
+  Left = 1008
+  Height = 240
+  Top = 299
+  Width = 320
+  Caption = 'О программе'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.0.6.0'
+  object Edit1: TEdit
+    Left = 0
+    Height = 240
+    Top = 0
+    Width = 320
+    Align = alClient
+    OnChange = Edit1Change
+    TabOrder = 0
+    Text = 'Программу делал криворукий'
+  end
+end
